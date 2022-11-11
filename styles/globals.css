@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "main-font";
+  src: url("/fonts/main-font.ttf");
+}
+
+.main-font {
+  font-family: "main-font";
+}
+
+@font-face {
+  font-family: "second-font";
+  src: url("/fonts/second-font.ttf");
+}
+
+.second-font {
+  font-family: "second-font";
+}
+
+body {
+  background-color: black;
+}
+
+/* * {
+  cursor: none;
+}
+
+.cursor {
+  background-color: #fff;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 45%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+} */
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #b7d500;
+  background: #e3ebd2;
+}
+
+::selection {
+  color: #b7d500;
+  background: #e3ebd2;
+}
+
+.marquee {
+  transform: rotate(-8.38deg);
+  box-shadow: 0px 13px 6px rgba(0, 0, 0, 0.31);
+}
+.marquee-two {
+  transform: rotate(-28.82deg);
+  box-shadow: 0px 13px 6px rgba(0, 0, 0, 0.31);
+}
+
+.marquee-three {
+  transform: rotate(30deg);
+  box-shadow: 0px 13px 6px rgba(0, 0, 0, 0.31);
+}
