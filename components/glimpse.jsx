@@ -35,6 +35,9 @@ export default function Glimpse() {
         <div className="hidden lg:block">
           <MarqueeTwo />
         </div>
+        <div className="hidden">
+          <MarqueeTwo />
+        </div>
         <div className="w-full h-screen flex flex-col items-center justify-center gap-y-0 lg:gap-y-12">
           <div className="hidden lg:block">
             <WtfRuchitRed />
