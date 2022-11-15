@@ -1,26 +1,126 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Mail() {
-  // const [zOpen, setZOpen] = useState(false);
+  const [mail, setMail] = useState("");
+  const [button, setButton] = useState(false);
+  const [message, setMessage] = useState("");
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setZOpen(!zOpen);
-  //   }, 5000);
-  // }, []);
+  console.log(mail);
+
+  function handleSubmit() {
+    const regEx =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (regEx.test(mail)) {
+      axios
+        .post("/api/waitlist", {
+          email: mail,
+        })
+        .then(() => {
+          console.log("success");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      setButton(true);
+      setMessage("");
+    } else {
+      setButton(false);
+      setMessage("uh-oh, that doesn’t look like a valid email, try again maybe?");
+    }
+  }
 
   return (
-    <main className="flex flex-col items-center justify-center gap-x-4 lg:flex-row gap-y-4 lg:mt-0">
-      <div className="z-20">
-        <input
-          placeholder="Enter your email"
-          type="email"
-          className="text-sm lg:text-lg bg-[#E3EBD2] w-[20rem] h-10 lg:w-[30rem] lg:h-14 main-font pl-10 text-black placeholder:text-black outline-none z-10"
-        />
-      </div>
-      <button className="text-sm lg:text-lg w-[20rem] h-10 flex items-center justify-center lg:w-40 lg:h-14 bg-[#E85433] text-black main-font z-10">
-        Notify Me
-      </button>
-    </main>
+    <>
+      {button ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-2xl lg:text-5xl text-center tracking-wide px-2"
+        >
+          Something cool coming up in your inbox real soon!
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-xl lg:text-5xl text-center tracking-wide px-2"
+        >
+          giving your company <br /> the digital presence <br /> it needs
+        </motion.div>
+      )}
+      {button ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide"
+        >
+          Something cool coming up in your inbox real soon!
+        </motion.div>
+      ) : (
+        <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide"
+          >
+            giving your company the digital presence it needs
+          </motion.div>
+        </div>
+      )}
+      <main className="">
+        {button ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-[#B7D500] text-4xl main-font mt-4"
+          >
+            Woohoooo!!
+          </motion.div>
+        ) : (
+          <div className="flex flex-col">
+            <div className="flex flex-col justify-center gap-x-4 lg:flex-row gap-y-4 lg:mt-0">
+              <div className="z-20">
+                <input
+                  required
+                  placeholder="Enter your email"
+                  type="email"
+                  value={mail}
+                  onChange={(e) => setMail(e.target.value)}
+                  className={
+                    !message
+                      ? "text-sm lg:text-lg bg-black w-[20rem] h-10 lg:w-[30rem] lg:h-14 main-font pl-4 text-white placeholder:text-white outline-none z-10 border-2 border-[#B7D500]"
+                      : "text-sm lg:text-lg bg-black w-[20rem] h-10 lg:w-[30rem] lg:h-14 main-font pl-4 text-white placeholder:text-white outline-none z-10 border-2 border-[#D50000]"
+                  }
+                />
+              </div>
+              <button
+                onClick={() => {
+                  handleSubmit();
+                }}
+                className="notify-button-shadow text-sm lg:text-lg w-[20rem] h-10 flex items-center justify-center lg:w-40 lg:h-14 bg-[#B7D500] text-black main-font z-10"
+              >
+                Notify Me
+              </button>
+            </div>
+            <div
+              className={
+                message
+                  ? "text-2xl text-white visible mt-2 z-30"
+                  : "invisible mt-1 z-30"
+              }
+            >
+              <h1 className="text-[#D50000] tracking-wide max-w-xs text-xs lg:text-sm main-font lg:max-w-none">{message}</h1>
+            </div>
+          </div>
+        )}
+      </main>
+    </>
   );
 }
