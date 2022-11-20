@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export default function Glimpse() {
   return (
     <>
-      <main className="relative">
+      <main className="relative w-screen h-screen overflow-hidden">
         <div className="lg:hidden absolute inset-10 -left-10">
           <Marquee
             className="marquee-two"
