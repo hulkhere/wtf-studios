@@ -27,7 +27,9 @@ export default function Mail() {
       setMessage("");
     } else {
       setButton(false);
-      setMessage("uh-oh, that doesn’t look like a valid email, try again maybe?");
+      setMessage(
+        "uh-oh, that doesn’t look like a valid email, try again maybe?"
+      );
     }
   }
 
@@ -112,11 +114,13 @@ export default function Mail() {
             <div
               className={
                 message
-                  ? "text-2xl text-white visible mt-2 z-30"
-                  : "invisible mt-1 z-30"
+                  ? "text-2xl text-white h-10 mt-1"
+                  : "invisible mt-1 z-30 h-10"
               }
             >
-              <h1 className="text-[#D50000] tracking-wide max-w-xs text-xs lg:text-sm main-font lg:max-w-none">{message}</h1>
+              <h1 className="text-[#D50000] tracking-wide max-w-xs text-xs lg:text-sm main-font lg:max-w-none">
+                {message}
+              </h1>
             </div>
           </div>
         )}
