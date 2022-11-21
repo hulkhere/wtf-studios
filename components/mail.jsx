@@ -36,55 +36,30 @@ export default function Mail() {
   return (
     <>
       {button ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-2xl lg:text-5xl text-center tracking-wide px-2"
-        >
+        <div className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-2xl lg:text-5xl text-center tracking-wide px-2">
           Something cool coming up in your inbox real soon!
-        </motion.div>
+        </div>
       ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-xl lg:text-5xl text-center tracking-wide px-2"
-        >
+        <div className="lg:hidden uppercase main-font text-[#E3EBD2] py-6 text-xl lg:text-5xl text-center tracking-wide px-2">
           giving your company <br /> the digital presence <br /> it needs
-        </motion.div>
+        </div>
       )}
       {button ? (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide"
-        >
+        <div className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide">
           Something cool coming up in your inbox real soon!
-        </motion.div>
+        </div>
       ) : (
         <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-            className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide"
-          >
+          <div className="max-w-6xl hidden lg:block uppercase main-font text-[#E3EBD2] py-6 text-[14px] lg:text-5xl text-center tracking-wide">
             giving your company the digital presence it needs
-          </motion.div>
+          </div>
         </div>
       )}
       <main className="">
         {button ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-[#B7D500] text-4xl main-font mt-4"
-          >
+          <div className="text-[#B7D500] text-4xl main-font mt-4">
             Woohoooo!!
-          </motion.div>
+          </div>
         ) : (
           <div className="flex flex-col">
             <div className="flex flex-col justify-center gap-x-4 lg:flex-row gap-y-4 lg:mt-0">

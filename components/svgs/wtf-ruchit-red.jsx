@@ -3,11 +3,7 @@ import { motion } from "framer-motion";
 
 export default function WtfRuchitRed() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 3 }}
-    >
+    <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="771"
@@ -24,6 +20,6 @@ export default function WtfRuchitRed() {
           fill="#b7d500"
         />
       </svg>
-    </motion.div>
+    </div>
   );
 }

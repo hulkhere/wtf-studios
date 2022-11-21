@@ -39,12 +39,7 @@ export default function Glimpse() {
           <div className="hidden lg:block">
             <WtfRuchitRed />
           </div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 3 }}
-            className="lg:hidden"
-          >
+          <div className="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="342"
@@ -61,7 +56,7 @@ export default function Glimpse() {
                 fill="#b7d500"
               />
             </svg>
-          </motion.div>
+          </div>
           <Mail />
         </div>
       </main>
