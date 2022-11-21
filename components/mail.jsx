@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import AnimatedTextWord from "./AnimatedTextWord";
 
 export default function Mail() {
   const [mail, setMail] = useState("");
@@ -28,7 +27,9 @@ export default function Mail() {
       setMessage("");
     } else {
       setButton(false);
-      setMessage("uh-oh, invalid email");
+      setMessage(
+        "uh-oh, that doesn’t look like a valid email, try again maybe?"
+      );
     }
   }
 
@@ -118,7 +119,7 @@ export default function Mail() {
               }
             >
               <h1 className="text-[#D50000] tracking-wide max-w-xs text-xs lg:text-sm main-font lg:max-w-none">
-                <AnimatedTextWord text={message} />
+                {message}
               </h1>
             </div>
           </div>
