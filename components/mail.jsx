@@ -87,6 +87,9 @@ export default function Mail() {
               </button>
             </div>
             <div
+              style={{
+                zIndex: 100,
+              }}
               className={
                 message
                   ? "text-2xl text-white h-10 mt-1"
