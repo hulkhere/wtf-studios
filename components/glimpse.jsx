@@ -16,16 +16,16 @@ export default function Glimpse() {
           <Marquee
             className="marquee-two"
             duration={10000}
-            background="#B7D500"
+            // background="#B7D500"
             width="100%"
             height="35px"
           >
-            <main className="w-full h-20 lg:h-20 bg-[#B7D500] flex items-center justify-center gap-x-5">
-              <h1 className="text-black text-lg main-font">COMING SOON</h1>
+            <main className="w-full h-20 lg:h-20 flex items-center justify-center gap-x-5">
+              <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
               <BlackStartMobile />
-              <h1 className="text-black text-lg main-font">COMING SOON</h1>
+              <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
               <BlackStartMobile />
-              <h1 className="text-black text-lg main-font">COMING SOON</h1>
+              <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
               <div className="pr-5">
                 <BlackStartMobile />
               </div>
@@ -62,18 +62,18 @@ export default function Glimpse() {
       </main>
       <div className="hidden lg:block mt-4 -mr-40">
         <Marquee
-          className="marquee-two"
+          className="marquee-grad"
           duration={10000}
-          background="#B7D500"
+          // background="#B7D500"
           width="100%"
           height="80px"
         >
-          <main className="w-full h-20 lg:h-20 bg-[#B7D500] flex items-center justify-center gap-x-5">
-            <h1 className="text-black text-5xl main-font">COMING SOON</h1>
+          <main className="w-full h-20 lg:h-20 flex items-center justify-center gap-x-5">
+            <h1 className="text-[#b7d500] text-5xl main-font">COMING SOON</h1>
             <BlackStar />
-            <h1 className="text-black text-5xl main-font">COMING SOON</h1>
+            <h1 className="text-[#b7d500] text-5xl main-font">COMING SOON</h1>
             <BlackStar />
-            <h1 className="text-black text-5xl main-font">COMING SOON</h1>
+            <h1 className="text-[#b7d500] text-5xl main-font">COMING SOON</h1>
             <BlackStar />
           </main>
         </Marquee>
@@ -82,16 +82,16 @@ export default function Glimpse() {
         <Marquee
           className="w-full marquee-three -mt-24 -ml-10"
           duration={10000}
-          background="#B7D500"
+          // background="#B7D500"
           width="100%"
           height="40px"
         >
-          <main className="w-full h-20 lg:h-20 bg-[#B7D500] flex items-center justify-center gap-x-5">
-            <h1 className="text-black text-lg main-font">COMING SOON</h1>
+          <main className="w-full h-20 lg:h-20 flex items-center justify-center gap-x-5">
+            <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
             <BlackStartMobile />
-            <h1 className="text-black text-lg main-font">COMING SOON</h1>
+            <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
             <BlackStartMobile />
-            <h1 className="text-black text-lg main-font">COMING SOON</h1>
+            <h1 className="text-[#b7d500] text-lg main-font">COMING SOON</h1>
             <div className="pr-5">
               <BlackStartMobile />
             </div>
