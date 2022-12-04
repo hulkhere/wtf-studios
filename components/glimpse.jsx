@@ -16,7 +16,6 @@ export default function Glimpse() {
           <Marquee
             className="marquee-two"
             duration={10000}
-            // background="#B7D500"
             width="100%"
             height="35px"
           >
@@ -64,7 +63,6 @@ export default function Glimpse() {
         <Marquee
           className="marquee-grad"
           duration={10000}
-          // background="#B7D500"
           width="100%"
           height="80px"
         >
@@ -82,7 +80,6 @@ export default function Glimpse() {
         <Marquee
           className="w-full marquee-three -mt-24 -ml-10"
           duration={10000}
-          // background="#B7D500"
           width="100%"
           height="40px"
         >

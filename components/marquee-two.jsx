@@ -9,7 +9,6 @@ export default function MarqueeTwo() {
         <Marquee
           className="marquee-two"
           duration={10000}
-          // background="#B7D500"
           width="100%"
           height="80px"
         >
@@ -27,7 +26,6 @@ export default function MarqueeTwo() {
         <Marquee
           className="marquee-two"
           duration={10000}
-          // background="#B7D500"
           width="100%"
           height="60px"
         >
