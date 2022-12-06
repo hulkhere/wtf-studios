@@ -7,7 +7,7 @@ export default function MarqueeTwo() {
     <div className="-mt-28 -ml-40">
       <div className="hidden lg:block">
         <Marquee
-          className="marquee-two border-gradient border-gradient-marquee"
+          className="marquee-two"
           duration={10000}
           width="100%"
           height="80px"
@@ -24,7 +24,7 @@ export default function MarqueeTwo() {
       </div>
       <div className="block lg:hidden">
         <Marquee
-          className="marquee-two border-gradient border-gradient-marquee"
+          className="marquee-two"
           duration={10000}
           width="100%"
           height="60px"
