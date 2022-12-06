@@ -14,7 +14,7 @@ export default function Glimpse() {
       <main className="relative w-screen h-screen overflow-hidden">
         <div className="lg:hidden absolute inset-10 -left-10">
           <Marquee
-            className="marquee-two"
+            className="marquee-two border-gradient border-gradient-marquee"
             duration={10000}
             width="100%"
             height="35px"
@@ -61,7 +61,7 @@ export default function Glimpse() {
       </main>
       <div className="hidden lg:block mt-4 -mr-40">
         <Marquee
-          className="marquee-grad"
+          className="marquee-grad border-gradient border-gradient-marquee"
           duration={10000}
           width="100%"
           height="80px"
@@ -78,7 +78,7 @@ export default function Glimpse() {
       </div>
       <div className="lg:hidden">
         <Marquee
-          className="w-full marquee-three -mt-24 -ml-10"
+          className="w-full marquee-three -mt-24 -ml-10 border-gradient border-gradient-marquee"
           duration={10000}
           width="100%"
           height="40px"

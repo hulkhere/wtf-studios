@@ -68,7 +68,6 @@ body {
     rgba(255, 255, 255, 0.0312) 55.58%
   );
   backdrop-filter: blur(25px);
-  border: 1px solid #484b38;
 }
 
 .marquee-three {
@@ -80,7 +79,6 @@ body {
     rgba(255, 255, 255, 0.0312) 55.58%
   );
   backdrop-filter: blur(25px);
-  border: 1px solid #484b38;
 }
 
 .notify-button-shadow {
@@ -96,5 +94,17 @@ body {
     rgba(255, 255, 255, 0.0312) 55.58%
   );
   backdrop-filter: blur(25px);
-  border: 1px solid #484b38;
+}
+
+.border-gradient {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+}
+.border-gradient-marquee {
+  border-image-source: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(207, 207, 207, 0)
+  );
 }
