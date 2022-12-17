@@ -12,14 +12,17 @@ import MarqueeOne from "../components/marquee-one";
 import WtfRuchitRed from "../components/svgs/wtf-ruchit-red";
 import Glimpse from "../components/glimpse";
 
-export default function Home(){
+export default function Home() {
+  const bodyStyle = {
+    overflow: "hidden",
+  };
+
   const [cursorVariant, setCursorVariant] = useState("default");
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
   return (
-    <div>
-      <Head>
-      </Head>
+    <div style={bodyStyle}>
+      <Head></Head>
       <Glimpse />
       {/* <MarqueeOne /> */}
       {/* <Header/>
