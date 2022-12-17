@@ -5,6 +5,7 @@
 body {
   position: relative;
   overflow: hidden;
+  touch-action: none;
 }
 
 @font-face {
