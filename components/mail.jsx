@@ -7,8 +7,6 @@ export default function Mail() {
   const [button, setButton] = useState(false);
   const [message, setMessage] = useState("");
 
-  // console.log(mail);
-
   function handleSubmit() {
     const regEx =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
